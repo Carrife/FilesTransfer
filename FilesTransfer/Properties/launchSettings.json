@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "ConsoleApp1": {
+      "commandName": "Project",
+      "commandLineArgs": "C:\\Users\\User\\Desktop\\Света\\IT\\EpolSoft\\SettingFiles\\custom.txt"
+    }
+  }
+}

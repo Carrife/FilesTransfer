@@ -1,0 +1,11 @@
+{
+    "sftp_host":"192.168.1.104",
+    "sftp_port":22,
+    "sftp_user":"tester",
+    "sftp_password":"1111",
+    "sftp_remote_dir":"/C:/Users/tester/Desktop/Wattpad/",
+    "local_dir":"C:/Users/User/Desktop/Света/IT/EpolSoft/localdir/",
+    "sql_user":"root",
+    "sql_password":"root41",
+    "sql_database":"sftpdb"
+}

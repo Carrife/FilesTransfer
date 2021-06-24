@@ -1,0 +1,7 @@
+CREATE DATABASE sftpdb;
+USE sftpdb;
+CREATE TABLE files (
+	id INTEGER AUTO_INCREMENT PRIMARY KEY,
+	filename VARCHAR(45),
+	copytime DATETIME
+);
