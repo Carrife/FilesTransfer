@@ -3,9 +3,14 @@ using Newtonsoft.Json;
 
 namespace FilesTransfer.Config
 {
-	class ConfigurationBuilder
+	interface IConfigurationBuilder
 	{
-		public Configuration ConfigureFromJSON(string configurationPath)
+		Configuration Configure(string configurationPath);
+	}
+
+	class JsonConfigurationBuilder : IConfigurationBuilder
+	{
+		public Configuration Configure(string configurationPath)
 		{
 			string configurationContent = File.ReadAllText(configurationPath);
 
@@ -13,8 +18,11 @@ namespace FilesTransfer.Config
 
 			return configuration;
 		}
+	}
 
-		public Configuration ConfigureFromCustom(string configurationPath)
+	class CustomConfigurationBuilder : IConfigurationBuilder
+	{
+		public Configuration Configure(string configurationPath)
 		{
 			string[] sub;
 			var configuration = new Configuration();

@@ -14,8 +14,8 @@ namespace FilesTransfer.Application
                 throw new Exception(ExceptionConstants.IncorrectPath);
             }
 
-            var configuration = new ConfigurationBuilder().ConfigureFromCustom(configurationPath);
-            //var configuration = new ConfigurationBuilder().ConfigureFromJSON(configurationPath);
+            //var configuration = new JsonConfigurationBuilder().Configure(configurationPath);
+            var configuration = new CustomConfigurationBuilder().Configure(configurationPath);
 
             new SftpService().Connect(configuration);
 
