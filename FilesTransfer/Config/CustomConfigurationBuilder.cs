@@ -1,25 +1,8 @@
 ﻿using System.IO;
-using Newtonsoft.Json;
+using FilesTransfer.Interfaces;
 
 namespace FilesTransfer.Config
 {
-	interface IConfigurationBuilder
-	{
-		Configuration Configure(string configurationPath);
-	}
-
-	class JsonConfigurationBuilder : IConfigurationBuilder
-	{
-		public Configuration Configure(string configurationPath)
-		{
-			string configurationContent = File.ReadAllText(configurationPath);
-
-			var configuration = JsonConvert.DeserializeObject<Configuration>(configurationContent);
-
-			return configuration;
-		}
-	}
-
 	class CustomConfigurationBuilder : IConfigurationBuilder
 	{
 		public Configuration Configure(string configurationPath)

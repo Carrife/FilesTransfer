@@ -19,8 +19,8 @@ namespace FilesTransfer.Application
 
             new SftpService().Connect(configuration);
 
-            //new DataBaseService().Entry(configuration);
-            new DataBaseService().EntryUsingEntityFramework(configuration);
+            //new DatabaseService().Entry(configuration);
+            new DatabaseServiceEntityFrameworkUsed().Entry(configuration);
         }
     }
 }
